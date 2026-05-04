@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClassPalette 개인정보 처리방침</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #1f2933;
+      --muted: #52616f;
+      --line: #d8dee4;
+      --accent: #2f6f73;
+      --bg: #f7f9fb;
+      --surface: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    article {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 34px;
+    }
+
+    h1, h2 {
+      line-height: 1.25;
+      color: var(--text);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    h2 {
+      margin: 32px 0 10px;
+      font-size: 20px;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 14px;
+      padding-left: 22px;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>ClassPalette 개인정보 처리방침</h1>
+      <p class="meta">시행일: 2026년 5월 4일</p>
+
+      <p>ClassPalette는 Palettory가 제공하는 Windows 데스크톱 앱입니다. 이 방침은 ClassPalette가 어떤 정보를 저장하고, Google Drive appDataFolder를 어떤 목적으로 사용하는지 설명합니다.</p>
+
+      <h2>수집 및 저장하는 정보</h2>
+      <p>ClassPalette는 앱 기능 제공을 위해 사용자가 입력하거나 설정한 데이터를 사용자의 기기에 저장합니다.</p>
+      <ul>
+        <li>앱 설정, 화면 구성, 테마와 패널 설정</li>
+        <li>학생 명단, 학생 메모, 좌석/교실 배치</li>
+        <li>시간표, 캘린더 일정, 급식표</li>
+        <li>1인 1역 보드, 칠판 문서</li>
+        <li>외부 사운드 항목의 표시 이름과 manifest 정보</li>
+      </ul>
+
+      <h2>Google 계정 및 Drive 사용</h2>
+      <p>Google 로그인은 선택 기능입니다. 사용자가 Google 로그인을 선택하면 ClassPalette는 개인 백업, 복원, 여러 PC 간 동기화를 위해 Google Drive API의 appDataFolder 범위를 사용합니다.</p>
+      <p>요청 scope는 <code>https://www.googleapis.com/auth/drive.appdata</code>입니다. 이 범위는 ClassPalette가 만든 앱 전용 데이터 파일에 접근하기 위한 목적으로만 사용됩니다.</p>
+
+      <h2>Google Drive에 저장되는 데이터</h2>
+      <p>동기화를 켠 경우 ClassPalette는 앱 전용 Google Drive appDataFolder에 JSON 문서 형태의 앱 데이터를 저장합니다. appDataFolder의 파일은 일반 Drive 파일 목록에 직접 표시되지 않습니다.</p>
+      <p>외부 사운드 파일의 실제 오디오 bytes와 사용자의 로컬 절대 경로는 Google Drive에 업로드하지 않습니다. 다른 PC에서는 파일 누락 상태를 표시하고 사용자가 다시 연결할 수 있도록 처리합니다.</p>
+
+      <h2>정보 공유</h2>
+      <p>ClassPalette는 사용자의 앱 데이터를 광고, 판매, 제3자 마케팅 목적으로 공유하지 않습니다. ClassPalette의 Google API 사용 및 다른 앱으로의 정보 이전은 Google API Services User Data Policy와 Limited Use requirements를 준수합니다.</p>
+
+      <h2>보관 및 삭제</h2>
+      <p>로컬 데이터는 사용자의 Windows 사용자 데이터 폴더에 저장됩니다. 사용자는 앱의 데이터 관리 기능 또는 운영체제 파일 관리 기능을 통해 로컬 데이터를 삭제할 수 있습니다.</p>
+      <p>Google 로그아웃을 수행하면 앱에 저장된 Google 인증 토큰은 삭제되고 동기화가 중단됩니다. Google Drive appDataFolder에 이미 저장된 백업 데이터는 사용자가 클라우드 데이터 삭제 기능을 사용하거나 Google 계정 관리 도구를 통해 삭제할 수 있습니다.</p>
+
+      <h2>보안</h2>
+      <p>ClassPalette는 설치 폴더가 아닌 사용자 AppData 영역에 데이터를 저장합니다. Google 인증 토큰은 일반 JSON 데이터 파일에 저장하지 않고 Windows 보안 저장소 사용을 목표로 구현합니다.</p>
+
+      <h2>아동 및 학생 정보</h2>
+      <p>ClassPalette는 교사가 수업과 학급 운영을 위해 입력한 정보를 저장할 수 있습니다. 학생 이름이나 메모처럼 개인정보가 될 수 있는 내용은 사용자가 직접 입력한 경우에만 저장됩니다.</p>
+
+      <h2>변경</h2>
+      <p>이 개인정보 처리방침은 앱 기능, 저장 방식, Google API 사용 범위가 바뀌면 갱신될 수 있습니다. 중요한 변경이 있는 경우 앱 또는 배포 페이지를 통해 안내합니다.</p>
+
+      <h2>문의</h2>
+      <p>개인정보 관련 문의는 <a href="mailto:palettory.offical@gmail.com">palettory.offical@gmail.com</a>으로 연락해 주세요.</p>
+    </article>
+  </main>
+</body>
+</html>
